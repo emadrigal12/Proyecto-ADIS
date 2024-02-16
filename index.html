@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ulacit</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="img/icon.ico">
+</head>
+
+<body>
+    <header>
+    </header>
+    <h1>Bienvenidos a canvas ULACIT</h1>
+    <div class="logo">
+        <img src="img/LogoU.png" alt="" height="100px" width="250px">
+    </div>
+    <div class="login-form">
+        <h4 class="Usuario">Usuario</h4>
+        <input type="text" id="txtUsuario" placeholder="Usuario">
+        <h4 class="Contraseña">Contraseña</h4>
+        <input type="password" id="txtContrasena" placeholder="Contraseña">
+        <button onclick="iniciarSesion()" class="login-btn">Iniciar Sesión</button>
+        <p id="mensajeError" style="color:red;"></p>
+
+
+    </div>
+
+    <script>
+        function iniciarSesion() {
+            var usuario = document.getElementById("txtUsuario").value;
+            var contraseña = document.getElementById("txtContrasena").value;
+
+
+
+
+            // Validar campos vacíos
+            if (usuario === '' || contraseña === '') {
+                document.getElementById("mensajeError").innerHTML = "Por favor, complete todos los campos.";
+                return;
+            }
+            // Validar de correo institucional
+            if (!usuario.endsWith("@ulacit.ed.cr")) {
+                document.getElementById("mensajeError").innerHTML = "El correo institucional debe pertenecer al dominio '@ulacit.ed.cr'.";
+                return;
+            }
+
+            // Validar contraseña
+            var regexContrasena = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[!@#$%^&*])[A-Za-z\d!@#$%^&*]{8,15}$/;
+            if (!regexContrasena.test(contraseña)) {
+                document.getElementById("mensajeError").innerHTML = "Contraseña: 8-15 caracteres, 1 mayúscula, 1 minúscula, 1 carácter especial, 1 número.";
+                return;
+            }
+
+            alert("¡Bienvenido a la plataforma!");
+
+            window.location.href = "portfolio.html";
+        }
+    </script>
+</body>
+
+</html>
