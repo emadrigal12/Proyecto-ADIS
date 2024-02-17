@@ -1,0 +1,86 @@
+body {
+    background-color: #fcfcfc;
+    /* display: flex;
+    align-items: center;
+    text-align: center;
+    justify-content: center; */
+    height: 95vh;
+    margin-top: 30px;
+}
+
+.logo {
+    position: absolute;
+    float: left;
+    top: 5%;
+    left: 3%;  
+}
+
+h1 {
+    font-family: 'Arial', cursive, bold;
+    letter-spacing: 8px;
+    color: #70009c;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    top: 10%;
+    left: 50%;
+    z-index: 1;
+    opacity: 1;
+}
+
+
+.Usuario{
+    position: absolute;
+    top: 34%;
+    left: 38%;
+}
+.Contraseña{
+    position: absolute;
+    top: 44%;
+    left: 38%;
+}
+input[type="text"] {
+    width: 200px;
+    padding: 10px;
+    position: absolute;
+    border-radius:5px;
+    
+    top: 35%;
+    left: 45%;
+}
+
+input[type="password"] {
+    width: 200px;
+    padding: 10px;
+    position: absolute;
+    border-radius:5px;
+    
+    top: 45%;
+    left: 45%;
+}
+
+.login-btn {
+    background-color: #70009c;
+    color: #fff;
+    border-radius:5px;
+    padding: 10px 20px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    position: absolute;
+    top: 60%;
+    left: 49%;
+}
+
+.login-btn:hover {
+    background-color: #50006b;
+}
+
+p{
+    position: absolute;
+    border-radius:5px;    
+    top: 50%;
+    left: 45%;
+}
+
+
+
+
