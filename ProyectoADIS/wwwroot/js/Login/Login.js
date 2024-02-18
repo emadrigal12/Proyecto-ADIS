@@ -1,7 +1,6 @@
 ﻿function iniciarSesion() {
-    console.log("Entro")
-    var usuario = document.getElementById("txtUsuario").value;
-    var contraseña = document.getElementById("txtContrasena").value;
+    let usuario = $("#txtUsuario").val()
+    let contraseña = $("#txtContrasena").val();
     // Validar campos vacíos
     if (usuario === '' || contraseña === '') {
         document.getElementById("mensajeError").innerHTML = "Por favor, complete todos los campos.";
@@ -14,11 +13,50 @@
     }
 
     // Validar contraseña
-    var regexContrasena = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[!@#$%^&*])[A-Za-z\d!@#$%^&*]{8,15}$/;
-    if (!regexContrasena.test(contraseña)) {
-        document.getElementById("mensajeError").innerHTML = "Contraseña: 8-15 caracteres, 1 mayúscula, 1 minúscula, 1 carácter especial, 1 número.";
-        return;
-    }
-    alert("¡Bienvenido a la plataforma!");
+    let regexContrasena = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[!@#$%^&*])[A-Za-z\d!@#$%^&*]{8,15}$/;
+    //if (!regexContrasena.test(contraseña)) {
+    //    document.getElementById("mensajeError").innerHTML = "Contraseña: 8-15 caracteres, 1 mayúscula, 1 minúscula, 1 carácter especial, 1 número.";
+    //    return;
+    //}
+
+    checkPrimerLogin();
 } 
 
+
+function checkPrimerLogin() {
+    let primerLogin = true
+    if (primerLogin) {
+        $('#actualizarContra').modal('show')
+    } 
+
+    return primerLogin
+}
+
+function validarContrasena(contrasena) {
+    let regexContrasena = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[!@#$%^&*])[A-Za-z\d!@#$%^&*]{8,15}$/;
+    return regexContrasena.test(contrasena)
+}
+
+function ActualizarContrasena() {
+    let contraActual = $('#contraActual').val()
+    let contraNueva = $('#contraNueva').val()
+    let confirmarContra = $('#confirmarContra').val()
+    if (contraActual == '' || contraNueva == '' || confirmarContra == '') {
+        return document.getElementById("mensajeErrorContra").innerHTML = "Por favor, complete todos los campos.";
+    }
+    if (contraActual !== "Ulacit2024#") {
+        return document.getElementById("mensajeErrorContra").innerHTML = "Contraseña actual incorrecta.";
+    }
+    if (!validarContrasena(contraNueva)) {
+        return document.getElementById("mensajeErrorContra").innerHTML = "Contraseña nueva debe tener: 8-15 caracteres, 1 mayúscula, 1 minúscula, 1 carácter especial, 1 número.";
+    }
+    if (contraNueva !== confirmarContra) {
+        return document.getElementById("mensajeErrorContra").innerHTML = "No coincide la contraseña nueva con la confirmada.";
+    }
+    document.getElementById("mensajeErrorContra").innerHTML = "";
+    toastr.success('Contraseña cambiada exitosamente.');
+
+    setTimeout( e => {
+        window.location.reload()
+    }, 2000)
+}
