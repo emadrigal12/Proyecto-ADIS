@@ -4,34 +4,43 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../../style/assignmentUpdateForm.css">
     <title>Portfolio</title>
 </head>
 <body>
-    <h1 style="color: slateblue;">Bienvenidos</h1>
+    <h1 style="color: slateblue;">Bienvenidos a canvas ULACIT</h1>
+
+    <button class="open-button" onclick="openForm()">Publicar Asignación</button>
+
+    <!-- The form -->
+    <div class="form-popup" id="myForm">
+        <form action="" class="form-container">
+
+            <label for="nombre"><b>Nombre de la Asignación</b></label>
+            <input type="text" placeholder="Ingrese el nombre de la asignación" name="nombre" required>
+
+            <label for="descripcion"><b>Descripción</b></label>
+            <input type="text" placeholder="Ingrese la descripción" name="descripcion">
+
+            <label for="fecha"><b>Fecha de Entrega</b></label>
+            <input type="datetime-local" placeholder="" name="fecha" required>
+
+            <button type="submit" class="btn">Publicar</button>
+            <button type="button" class="btn cancel" onclick="closeForm()">Close</button>
+        </form>
+    </div>
+
+    <script>
+        function openForm() {
+            document.getElementById("myForm").style.display = "block";
+        }
+
+        function closeForm() {
+            document.getElementById("myForm").style.display = "none";
+        } 
+    </script>
 
 </body>
 </html>
 
-<head>
-    <title>Ulacit</title>
-    <link rel="stylesheet" href="~/css/style.css">
-    @section Scripts {
-    <script src="~/js/login/login.js"></script>
-    }
-</head>
-<div>
-    <h1>Bienvenidos a canvas ULACIT</h1>
-    <div class="logo">
-        <img src="@Url.Content(" ~ /imag/LogoU.png")" alt="logo">
-    </div>
-    <div class="login-form">
-        <h4 class="Usuario">Usuario</h4>
-        <input type="text" id="txtUsuario" placeholder="Usuario" class="">
-        <h4 class="Contraseña">Contraseña</h4>
-        <input type="password" id="txtContrasena" placeholder="Contraseña">
-        <button onclick="iniciarSesion()" class="login-btn">Iniciar Sesión</button>
-        <p id="mensajeError" style="color:red;"></p>
 
-
-    </div>
-</div>
