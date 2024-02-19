@@ -5,6 +5,10 @@
       "PackagePath": "staticwebassets\\ProyectoADIS.bundle.scp.css"
     },
     {
+      "Id": "C:\\Users\\emili\\Documents\\Universidad\\Analisis e implementacion\\ProyectoFinal\\Proyecto-ADIS\\ProyectoADIS\\wwwroot\\css\\Portfolio.css\\assignmentUpdateForm.css",
+      "PackagePath": "staticwebassets\\css\\Portfolio.css\\assignmentUpdateForm.css"
+    },
+    {
       "Id": "C:\\Users\\emili\\Documents\\Universidad\\Analisis e implementacion\\ProyectoFinal\\Proyecto-ADIS\\ProyectoADIS\\wwwroot\\css\\site.css",
       "PackagePath": "staticwebassets\\css\\site.css"
     },
@@ -31,6 +35,10 @@
     {
       "Id": "C:\\Users\\emili\\Documents\\Universidad\\Analisis e implementacion\\ProyectoFinal\\Proyecto-ADIS\\ProyectoADIS\\wwwroot\\js\\Login\\Login.js",
       "PackagePath": "staticwebassets\\js\\Login\\Login.js"
+    },
+    {
+      "Id": "C:\\Users\\emili\\Documents\\Universidad\\Analisis e implementacion\\ProyectoFinal\\Proyecto-ADIS\\ProyectoADIS\\wwwroot\\js\\Portfolio\\Index.js",
+      "PackagePath": "staticwebassets\\js\\Portfolio\\Index.js"
     },
     {
       "Id": "C:\\Users\\emili\\Documents\\Universidad\\Analisis e implementacion\\ProyectoFinal\\Proyecto-ADIS\\ProyectoADIS\\wwwroot\\js\\site.js",

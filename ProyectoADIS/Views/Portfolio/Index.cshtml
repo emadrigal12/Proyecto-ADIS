@@ -1,0 +1,46 @@
+﻿@{
+    ViewData["Title"] = "Portfolio";
+}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="~/css/Portfolio.css/assignmentUpdateForm.css">
+    <title>Portfolio</title>
+</head>
+<body>
+    <h1 style="color: slateblue;">Bienvenidos a canvas ULACIT</h1>
+
+    <button class="open-button" onclick="openForm()">Publicar Asignación</button>
+
+    <!-- The form -->
+    <div class="form-popup" id="myForm">
+        <form action="" class="form-container">
+
+            <label for="nombre"><b>Nombre de la Asignación</b></label>
+            <input type="text" placeholder="Ingrese el nombre de la asignación" name="nombre" required>
+
+            <label for="descripcion"><b>Descripción</b></label>
+            <input type="text" placeholder="Ingrese la descripción" name="descripcion">
+
+            <label for="fecha"><b>Fecha de Entrega</b></label>
+            <input type="datetime-local" placeholder="" name="fecha" required>
+
+            <button type="submit" class="btn">Publicar</button>
+            <button type="button" class="btn cancel" onclick="closeForm()">Close</button>
+        </form>
+    </div>
+
+    @section Scripts {
+        <script src="~/js/Portfolio/Index.js"></script>
+        <script src="~/js/toastr.min.js"></script>
+    }
+
+
+</body>
+</html>
+
+

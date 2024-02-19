@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "ZkVWaD3bzUYt8Are4W9Y+MRmZQnI60G9DRYNWkYVBvI=",
+  "Hash": "fzBcQmREjx70vlTS6YXBaFqQGvrPn1orM5/EQ/Xog50=",
   "Source": "ProyectoADIS",
   "BasePath": "_content/ProyectoADIS",
   "Mode": "Default",
@@ -53,6 +53,25 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "C:\\Users\\emili\\Documents\\Universidad\\Analisis e implementacion\\ProyectoFinal\\Proyecto-ADIS\\ProyectoADIS\\obj\\Debug\\net8.0\\scopedcss\\projectbundle\\ProyectoADIS.bundle.scp.css"
+    },
+    {
+      "Identity": "C:\\Users\\emili\\Documents\\Universidad\\Analisis e implementacion\\ProyectoFinal\\Proyecto-ADIS\\ProyectoADIS\\wwwroot\\css\\Portfolio.css\\assignmentUpdateForm.css",
+      "SourceId": "ProyectoADIS",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\emili\\Documents\\Universidad\\Analisis e implementacion\\ProyectoFinal\\Proyecto-ADIS\\ProyectoADIS\\wwwroot\\",
+      "BasePath": "_content/ProyectoADIS",
+      "RelativePath": "css/Portfolio.css/assignmentUpdateForm.css",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\css\\Portfolio.css\\assignmentUpdateForm.css"
     },
     {
       "Identity": "C:\\Users\\emili\\Documents\\Universidad\\Analisis e implementacion\\ProyectoFinal\\Proyecto-ADIS\\ProyectoADIS\\wwwroot\\css\\site.css",
@@ -186,6 +205,25 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\js\\Login\\Login.js"
+    },
+    {
+      "Identity": "C:\\Users\\emili\\Documents\\Universidad\\Analisis e implementacion\\ProyectoFinal\\Proyecto-ADIS\\ProyectoADIS\\wwwroot\\js\\Portfolio\\Index.js",
+      "SourceId": "ProyectoADIS",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\emili\\Documents\\Universidad\\Analisis e implementacion\\ProyectoFinal\\Proyecto-ADIS\\ProyectoADIS\\wwwroot\\",
+      "BasePath": "_content/ProyectoADIS",
+      "RelativePath": "js/Portfolio/Index.js",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\js\\Portfolio\\Index.js"
     },
     {
       "Identity": "C:\\Users\\emili\\Documents\\Universidad\\Analisis e implementacion\\ProyectoFinal\\Proyecto-ADIS\\ProyectoADIS\\wwwroot\\js\\site.js",

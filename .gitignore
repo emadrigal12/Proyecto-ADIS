@@ -1,3 +1,10 @@
 
 *.dll
 *.cache
+*.dll
+*.exe
+*.pdb
+*.cache
+*.editorconfig
+*.pdb
+*.pdb

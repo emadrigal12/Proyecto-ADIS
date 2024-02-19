@@ -8,6 +8,7 @@
 
   <ItemGroup>
     <None Include="wwwroot\js\Login\Login.js" />
+    <None Include="wwwroot\js\Portfolio\Index.js" />
   </ItemGroup>
 
   <ItemGroup>
