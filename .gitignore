@@ -1,0 +1,11 @@
+
+*.dll
+*.cache
+ProyectoADIS/bin/Debug/net8.0/ProyectoADIS.dll
+*.dll
+*.exe
+*.pdb
+*.cache
+*.editorconfig
+*.pdb
+*.pdb

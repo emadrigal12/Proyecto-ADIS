@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "f/MhumZsZPXt1yV7PkNLGVif8e2Mp25qiHgqvO+x6E0=",
+  "Hash": "SWIlF0UryNsJ2DJ2eAvM/KQLhUKClXSS6dydKW8M4n4=",
   "Source": "ProyectoADIS",
   "BasePath": "_content/ProyectoADIS",
   "Mode": "Default",
@@ -55,6 +55,25 @@
       "OriginalItemSpec": "C:\\Users\\emili\\Documents\\Universidad\\Analisis e implementacion\\ProyectoFinal\\Proyecto-ADIS\\ProyectoADIS\\obj\\Debug\\net8.0\\scopedcss\\projectbundle\\ProyectoADIS.bundle.scp.css"
     },
     {
+      "Identity": "C:\\Users\\emili\\Documents\\Universidad\\Analisis e implementacion\\ProyectoFinal\\Proyecto-ADIS\\ProyectoADIS\\wwwroot\\css\\Portfolio.css\\assignmentUpdateForm.css",
+      "SourceId": "ProyectoADIS",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\emili\\Documents\\Universidad\\Analisis e implementacion\\ProyectoFinal\\Proyecto-ADIS\\ProyectoADIS\\wwwroot\\",
+      "BasePath": "_content/ProyectoADIS",
+      "RelativePath": "css/Portfolio.css/assignmentUpdateForm.css",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\css\\Portfolio.css\\assignmentUpdateForm.css"
+    },
+    {
       "Identity": "C:\\Users\\emili\\Documents\\Universidad\\Analisis e implementacion\\ProyectoFinal\\Proyecto-ADIS\\ProyectoADIS\\wwwroot\\css\\site.css",
       "SourceId": "ProyectoADIS",
       "SourceType": "Discovered",
@@ -93,6 +112,25 @@
       "OriginalItemSpec": "wwwroot\\css\\style.css"
     },
     {
+      "Identity": "C:\\Users\\emili\\Documents\\Universidad\\Analisis e implementacion\\ProyectoFinal\\Proyecto-ADIS\\ProyectoADIS\\wwwroot\\css\\toastr.min.css",
+      "SourceId": "ProyectoADIS",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\emili\\Documents\\Universidad\\Analisis e implementacion\\ProyectoFinal\\Proyecto-ADIS\\ProyectoADIS\\wwwroot\\",
+      "BasePath": "_content/ProyectoADIS",
+      "RelativePath": "css/toastr.min.css",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\css\\toastr.min.css"
+    },
+    {
       "Identity": "C:\\Users\\emili\\Documents\\Universidad\\Analisis e implementacion\\ProyectoFinal\\Proyecto-ADIS\\ProyectoADIS\\wwwroot\\favicon.ico",
       "SourceId": "ProyectoADIS",
       "SourceType": "Discovered",
@@ -110,6 +148,25 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\favicon.ico"
+    },
+    {
+      "Identity": "C:\\Users\\emili\\Documents\\Universidad\\Analisis e implementacion\\ProyectoFinal\\Proyecto-ADIS\\ProyectoADIS\\wwwroot\\img\\home.png",
+      "SourceId": "ProyectoADIS",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\emili\\Documents\\Universidad\\Analisis e implementacion\\ProyectoFinal\\Proyecto-ADIS\\ProyectoADIS\\wwwroot\\",
+      "BasePath": "_content/ProyectoADIS",
+      "RelativePath": "img/home.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\img\\home.png"
     },
     {
       "Identity": "C:\\Users\\emili\\Documents\\Universidad\\Analisis e implementacion\\ProyectoFinal\\Proyecto-ADIS\\ProyectoADIS\\wwwroot\\img\\icon.ico",
@@ -169,6 +226,25 @@
       "OriginalItemSpec": "wwwroot\\js\\Login\\Login.js"
     },
     {
+      "Identity": "C:\\Users\\emili\\Documents\\Universidad\\Analisis e implementacion\\ProyectoFinal\\Proyecto-ADIS\\ProyectoADIS\\wwwroot\\js\\Portfolio\\Index.js",
+      "SourceId": "ProyectoADIS",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\emili\\Documents\\Universidad\\Analisis e implementacion\\ProyectoFinal\\Proyecto-ADIS\\ProyectoADIS\\wwwroot\\",
+      "BasePath": "_content/ProyectoADIS",
+      "RelativePath": "js/Portfolio/Index.js",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\js\\Portfolio\\Index.js"
+    },
+    {
       "Identity": "C:\\Users\\emili\\Documents\\Universidad\\Analisis e implementacion\\ProyectoFinal\\Proyecto-ADIS\\ProyectoADIS\\wwwroot\\js\\site.js",
       "SourceId": "ProyectoADIS",
       "SourceType": "Discovered",
@@ -186,6 +262,25 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\js\\site.js"
+    },
+    {
+      "Identity": "C:\\Users\\emili\\Documents\\Universidad\\Analisis e implementacion\\ProyectoFinal\\Proyecto-ADIS\\ProyectoADIS\\wwwroot\\js\\toastr.min.js",
+      "SourceId": "ProyectoADIS",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\emili\\Documents\\Universidad\\Analisis e implementacion\\ProyectoFinal\\Proyecto-ADIS\\ProyectoADIS\\wwwroot\\",
+      "BasePath": "_content/ProyectoADIS",
+      "RelativePath": "js/toastr.min.js",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\js\\toastr.min.js"
     },
     {
       "Identity": "C:\\Users\\emili\\Documents\\Universidad\\Analisis e implementacion\\ProyectoFinal\\Proyecto-ADIS\\ProyectoADIS\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css",
