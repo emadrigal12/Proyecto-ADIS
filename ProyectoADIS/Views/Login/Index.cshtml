@@ -1,5 +1,7 @@
 ﻿@{
     ViewData["Title"] = "Login";
+    Layout = null;
+
 }
 
 <!DOCTYPE html>
@@ -8,11 +10,15 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login Form</title>
-    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="~/css/style.css">
     <link rel="stylesheet" href="~/css/toastr.min.css">
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css"/>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+
 </head>
 <body>
+    <script src="~/js/login/Login.js"></script>
+    <script src="~/js/toastr.min.js"></script>
     <div class="container mt-5">
         <div class="row justify-content-center">
             <div class="col-md-6">
@@ -32,7 +38,7 @@
                                 <input type="password" class="form-control" id="txtContrasena" placeholder="Ingresa tu contraseña">
                             </div>
                             <div id="mensajeError" class="text-danger mb-4"></div>
-                            <button type="button" onclick="iniciarSesion()" class="btn btn-purple btn-block">Iniciar Sesión</button>
+                            <button type="button" onclick="iniciarSesion()" class="btn btn-purple btn-block" style="background-color: #70009c; color: #fff">Iniciar Sesión</button>
                         </form>
                     </div>
                 </div>
@@ -71,20 +77,25 @@
                 </div>
                 <div class="modal-footer">
                     <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                    <button type="button" class="btn btn-purple" onclick="ActualizarContrasena()">Guardar cambios</button>
+                    <button type="button" class="btn btn-purple" onclick="ActualizarContrasena()" style="background-color: #70009c; color: #fff">Guardar cambios</button>
                 </div>
             </div>
         </div>
     </div>
 
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+    <script src="~/lib/jquery/dist/jquery.js"></script>
+    <script src="~/lib/jquery-validation/dist/jquery.validate.js"></script>
+    <script src="~/lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.js"></script>
+    <script src="~/js/toastr.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
 
 
-@section Scripts {
-    <script src="~/js/login/login.js"></script>
-    <script src="~/js/toastr.min.js"></script>
-}
+
 
 
 

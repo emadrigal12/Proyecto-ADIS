@@ -1,0 +1,79 @@
+﻿@{
+    ViewData["Title"] = "Portfolio";
+}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="~/css/Portfolio.css/assignmentUpdateForm.css">
+    <link rel="stylesheet" href="~/css/toastr.min.css">
+    <title>Portfolio</title>
+</head>
+<body>
+
+    <button class="open-button d-none" onclick="openForm()">Publicar Asignación</button>
+
+    <!-- The form -->
+    <div class="container mt-5">
+        <div class="row justify-content-center">
+            <div class="col-md-12">
+                <div class="card">
+                    <div class="card-header text-center">
+                        <h1 class="card-title title-color">Bienvenidos a Canvas ULACIT</h1>
+                    </div>
+                    <div class="card-body">
+                        <form>
+                            <div class="form-group ">
+                                <label for="username">Nombre de la Asignación:</label>
+                                <input type="text" class="form-control" id="txtNombre" placeholder="Ingrese el nombre">
+                            </div>
+
+                            <div class="form-group mt-2">
+                                <label for="Descripcion">Descripción</label>
+                                <textarea class="form-control" id="txtDescripcion" placeholder="Ingrese una descripción"></textarea>
+                            </div>
+
+                            <div class="form-group mt-2 ">
+                                <label for="fecha">Fecha de Entrega</label><br />
+                                <input class="form-control"  type="datetime-local" placeholder="Seleccione la fecha de entrega" name="fecha" required>
+                            </div>
+
+                            <button type="button" onclick="closeForm();" class="btn open-button mt-4">Publicar</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="form-popup d-none" id="myForm">
+        <form action="" class="form-container">
+
+            <label for="nombre"><b>Nombre de la Asignación</b></label>
+            <input type="text" placeholder="Ingrese el nombre de la asignación" name="nombre" required>
+
+            <label for="descripcion"><b>Descripción</b></label>
+            <input type="text" placeholder="Ingrese la descripción" name="descripcion">
+
+            <label for="fecha"><b>Fecha de Entrega</b></label>
+            <input type="datetime-local" placeholder="" name="fecha" required>
+
+            <button type="submit" class="btn">Publicar</button>
+            <button type="button" class="btn cancel" onclick="closeForm()">Close</button>
+            
+        </form>
+    </div>
+
+    @section Scripts {
+        <script src="~/js/Portfolio/Index.js"></script>
+        <script src="~/js/toastr.min.js"></script>
+    }
+    
+
+
+</body>
+</html>
+
+

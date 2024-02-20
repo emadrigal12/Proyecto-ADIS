@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("ProyectoADIS")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+af9bdd33dd3ae69ff772deec3d400dc8d2f6cd47")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+3a52da7141e9cddda28d2cb8a6faed9b9aaab6c5")]
 [assembly: System.Reflection.AssemblyProductAttribute("ProyectoADIS")]
 [assembly: System.Reflection.AssemblyTitleAttribute("ProyectoADIS")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

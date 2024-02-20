@@ -18,7 +18,6 @@
     //    document.getElementById("mensajeError").innerHTML = "Contraseña: 8-15 caracteres, 1 mayúscula, 1 minúscula, 1 carácter especial, 1 número.";
     //    return;
     //}
-
     checkPrimerLogin();
 } 
 
@@ -56,7 +55,7 @@ function ActualizarContrasena() {
     document.getElementById("mensajeErrorContra").innerHTML = "";
     toastr.success('Contraseña cambiada exitosamente.');
 
-    setTimeout( e => {
-        window.location.reload()
-    }, 2000)
+    setTimeout(() => {
+        window.location.href = '/Home/Index';
+    }, 2000);
 }
