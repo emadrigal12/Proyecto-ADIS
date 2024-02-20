@@ -2,6 +2,10 @@
     document.getElementById("myForm").style.display = "block";
 }
 
-function closeForm() {
-    document.getElementById("myForm").style.display = "none";
-} 
+
+
+
+
+$(function () {
+    toastr.success('Contraseña cambiada exitosamente.');
+});
