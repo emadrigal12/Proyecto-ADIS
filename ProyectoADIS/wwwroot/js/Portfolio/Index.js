@@ -7,5 +7,5 @@
 
 
 $(function () {
-    toastr.success('Contraseña cambiada exitosamente.');
+    
 });
