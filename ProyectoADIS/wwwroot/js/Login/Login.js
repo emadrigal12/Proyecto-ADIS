@@ -6,6 +6,9 @@
         document.getElementById("mensajeError").innerHTML = "Por favor, complete todos los campos.";
         return;
     }
+    if (contraseña !== "Ulacit2024#") {
+        return document.getElementById("mensajeError").innerHTML = "Usuario y contraseña inválidos, reintente nuevamente.";
+    }
     // Validar de correo institucional
     if (!usuario.endsWith("@ulacit.ed.cr")) {
         document.getElementById("mensajeError").innerHTML = "El correo institucional debe pertenecer al dominio '@ulacit.ed.cr'.";
@@ -14,10 +17,10 @@
 
     // Validar contraseña
     let regexContrasena = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[!@#$%^&*])[A-Za-z\d!@#$%^&*]{8,15}$/;
-    //if (!regexContrasena.test(contraseña)) {
-    //    document.getElementById("mensajeError").innerHTML = "Contraseña: 8-15 caracteres, 1 mayúscula, 1 minúscula, 1 carácter especial, 1 número.";
-    //    return;
-    //}
+    if (!regexContrasena.test(contraseña)) {
+        document.getElementById("mensajeError").innerHTML = "Contraseña: 8-15 caracteres, 1 mayúscula, 1 minúscula, 1 carácter especial, 1 número.";
+        return;
+    }
     checkPrimerLogin();
 } 
 
@@ -56,6 +59,6 @@ function ActualizarContrasena() {
     toastr.success('Contraseña cambiada exitosamente.');
 
     setTimeout(() => {
-        window.location.href = '/Home/Index';
+        window.location.reload;
     }, 2000);
 }

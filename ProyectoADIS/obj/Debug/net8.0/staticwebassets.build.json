@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "fzBcQmREjx70vlTS6YXBaFqQGvrPn1orM5/EQ/Xog50=",
+  "Hash": "SWIlF0UryNsJ2DJ2eAvM/KQLhUKClXSS6dydKW8M4n4=",
   "Source": "ProyectoADIS",
   "BasePath": "_content/ProyectoADIS",
   "Mode": "Default",
@@ -148,6 +148,25 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\favicon.ico"
+    },
+    {
+      "Identity": "C:\\Users\\emili\\Documents\\Universidad\\Analisis e implementacion\\ProyectoFinal\\Proyecto-ADIS\\ProyectoADIS\\wwwroot\\img\\home.png",
+      "SourceId": "ProyectoADIS",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\emili\\Documents\\Universidad\\Analisis e implementacion\\ProyectoFinal\\Proyecto-ADIS\\ProyectoADIS\\wwwroot\\",
+      "BasePath": "_content/ProyectoADIS",
+      "RelativePath": "img/home.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\img\\home.png"
     },
     {
       "Identity": "C:\\Users\\emili\\Documents\\Universidad\\Analisis e implementacion\\ProyectoFinal\\Proyecto-ADIS\\ProyectoADIS\\wwwroot\\img\\icon.ico",

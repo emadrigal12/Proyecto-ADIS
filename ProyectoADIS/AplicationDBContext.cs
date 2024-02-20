@@ -1,5 +1,6 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using ProyectoADIS.Entities;
+using ProyectoADIS.Models;
 
 namespace ProyectoADIS
 {
@@ -12,5 +13,6 @@ namespace ProyectoADIS
 
         public DbSet<Usuario> Usuarios { get; set; }
         public DbSet<Rol> Roles { get; set; }
+        public DbSet<Asignacion> Asignacion { get; set; }
     }
 }

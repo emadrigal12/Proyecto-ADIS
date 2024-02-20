@@ -4,7 +4,7 @@ namespace ProyectoADIS.Controllers
 {
     public class AsignacionAddController : Controller
     {
-        public IActionResult Portfolio()
+        public IActionResult Index()
         {
             return View();
         }
