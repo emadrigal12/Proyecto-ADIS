@@ -12,7 +12,6 @@
         public Rol Rol { get; set; }
         public string Contrasena { get; set; }
         public string CambioContrasena { get; set; }
+        public bool Estado { get; set; }
     }
-
-
 }
