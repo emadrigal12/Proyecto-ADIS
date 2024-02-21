@@ -18,7 +18,7 @@ namespace ProyectoADIS
 
 
             services.AddDbContext<AplicationDBContext>(options =>
-                options.UseSqlServer(Configuration.GetConnectionString("BloggingDatabase")));
+                options.UseSqlServer(Configuration.GetConnectionString("Database")));
 
             services.AddEndpointsApiExplorer();
 
