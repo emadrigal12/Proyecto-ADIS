@@ -10,6 +10,8 @@ namespace ProyectoADIS
         {
             
         }
+        public AplicationDBContext(string valor) => Valor = valor;
+        public string Valor { get; }
 
         public DbSet<Usuario> Usuarios { get; set; }
         public DbSet<Rol> Roles { get; set; }

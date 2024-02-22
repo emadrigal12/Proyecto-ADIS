@@ -16,11 +16,11 @@ namespace ProyectoADIS
         {
             services.AddControllers().AddJsonOptions(item => item.JsonSerializerOptions.ReferenceHandler = ReferenceHandler.IgnoreCycles);
 
-
+            services.AddControllersWithViews();
             services.AddDbContext<AplicationDBContext>(options =>
                 options.UseSqlServer(Configuration.GetConnectionString("Database")));
-
             services.AddEndpointsApiExplorer();
+
 
             
 
