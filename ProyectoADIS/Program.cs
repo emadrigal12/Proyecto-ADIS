@@ -8,6 +8,7 @@ var startup = new StartUp(builder.Configuration);
 
 startup.ConfigureServices(builder.Services);
 
+
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.
@@ -23,7 +24,7 @@ app.UseStaticFiles();
 
 app.UseCors();
 app.UseRouting();
-
+app.UseAuthentication();
 app.UseAuthorization();
 
 app.MapControllerRoute(

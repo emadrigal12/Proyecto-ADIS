@@ -38,7 +38,7 @@
                                 <input type="password" class="form-control" id="txtContrasena" placeholder="Ingresa tu contraseña">
                             </div>
                             <div id="mensajeError" class="text-danger mb-4"></div>
-                            <button type="button" onclick="iniciarSesion()" class="btn btn-purple btn-block" style="background-color: #70009c; color: #fff">Iniciar Sesión</button>
+                            <button type="button" data-login-url="@Url.Action("Login", "Login")" onclick="iniciarSesion()" class="btn btn-purple btn-block" style="background-color: #70009c; color: #fff">Iniciar Sesión</button>
                         </form>
                     </div>
                 </div>
@@ -91,6 +91,10 @@
     <script src="~/lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.js"></script>
     <script src="~/js/toastr.min.js"></script>
     <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+
+    <script>
+        let LOGIN_URL = '@Url.Content("~/Login")';
+    </script>
 </body>
 </html>
 
