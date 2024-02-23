@@ -1,12 +1,17 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Authentication.Cookies;
+using Microsoft.AspNetCore.Authentication;
+using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Mvc;
 using Microsoft.Data.SqlClient;
 using Microsoft.EntityFrameworkCore;
 using ProyectoADIS.Models;
 using System;
 using System.Data;
+using System.Security.Claims;
 
 namespace ProyectoADIS.Controllers
 {
+    
     public class LoginController : Controller
     {
 
@@ -46,7 +51,7 @@ namespace ProyectoADIS.Controllers
         }
 
         [HttpPost]
-        public ActionResult IniciarSesion([FromBody] Login l)
+        public async Task<IActionResult> IniciarSesion([FromBody] Login l)
         {
             try
             {
@@ -66,12 +71,26 @@ namespace ProyectoADIS.Controllers
                             if (dr.Read())
                             {
                                 Response.Cookies.Append("user", "Bienvenido " + l.Usuario);
+                                List<Claim> c = new List<Claim>()
+                                {
+                                    new Claim(ClaimTypes.NameIdentifier, l.Usuario)
+                                };
+                                ClaimsIdentity ci = new(c, CookieAuthenticationDefaults.AuthenticationScheme);
+                                AuthenticationProperties p = new();
+
+                                p.AllowRefresh = true;
+
+                                p.ExpiresUtc = DateTimeOffset.UtcNow.AddDays(1);
+
+                                await HttpContext.SignInAsync(CookieAuthenticationDefaults.AuthenticationScheme, new ClaimsPrincipal(ci), p);
                                 return RedirectToAction("Index", "Home");
                             }
                             else
                             {
                                 ViewData["error"] = "Error de credenciales";
                             }
+
+                            
 
                             con.Close();
                         }
