@@ -1,7 +1,7 @@
 .vs/
-.exe
-.pdb
-.dll
-.suo
-.cache
-.suo
+*.exe
+*.pdb
+*.dll
+*.suo
+*.cache
+*.suo
