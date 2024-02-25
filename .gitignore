@@ -10,3 +10,9 @@ ProyectoADIS/bin/Debug/net8.0/ProyectoADIS.dll
 *.pdb
 *.pdb
 ProyectoADIS/bin/Debug/net8.0/ProyectoADIS.dll
+*.pdb
+*.dll
+*.exe
+*.pdb
+*.editorconfig
+ProyectoADIS/.vs/ProyectoADIS/v17/.suo

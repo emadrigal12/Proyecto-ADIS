@@ -1,0 +1,30 @@
+﻿@{
+    ViewData["Title"] = "Subir Asignación";
+}
+
+<div class="container mt-5">
+    <div class="row">
+        <div class="col-md-12">
+            <div class="card shadow">
+                <div class="card-header bg-primary text-white">
+                    <h5 class="card-title mb-0">Subir Asignación</h5>
+                </div>
+                <div class="card-body">
+                    <form enctype="multipart/form-data">
+                        <div class="mb-3">
+                            <label for="nombreAsignacion" class="form-label">Nombre de la Asignación</label>
+                            <input type="text" class="form-control" id="nombreAsignacion" name="nombreAsignacion" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="archivoAsignacion" class="form-label">Seleccionar Archivo</label>
+                            <input type="file" class="form-control" id="archivoAsignacion" name="archivoAsignacion" accept=".pdf,.doc,.docx" required>
+                        </div>
+                        <div class="text-center">
+                            <button type="submit" class="btn btn-primary">Cargar tarea</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

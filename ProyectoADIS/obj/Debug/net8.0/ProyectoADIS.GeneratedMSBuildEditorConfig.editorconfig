@@ -18,8 +18,20 @@ build_property.GenerateRazorMetadataSourceChecksumAttributes =
 build_property.MSBuildProjectDirectory = C:\Users\emili\Documents\Universidad\Analisis e implementacion\ProyectoFinal\Proyecto-ADIS\ProyectoADIS
 build_property._RazorSourceGeneratorDebug = 
 
+[C:/Users/emili/Documents/Universidad/Analisis e implementacion/ProyectoFinal/Proyecto-ADIS/ProyectoADIS/Views/AsignacionAdd/Asignacion.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQXNpZ25hY2lvbkFkZFxBc2lnbmFjaW9uLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/Users/emili/Documents/Universidad/Analisis e implementacion/ProyectoFinal/Proyecto-ADIS/ProyectoADIS/Views/AsignacionAdd/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQXNpZ25hY2lvbkFkZFxJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/emili/Documents/Universidad/Analisis e implementacion/ProyectoFinal/Proyecto-ADIS/ProyectoADIS/Views/Asignacion/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQXNpZ25hY2lvblxJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/emili/Documents/Universidad/Analisis e implementacion/ProyectoFinal/Proyecto-ADIS/ProyectoADIS/Views/Curso/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ3Vyc29cSW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/emili/Documents/Universidad/Analisis e implementacion/ProyectoFinal/Proyecto-ADIS/ProyectoADIS/Views/Home/Index.cshtml]

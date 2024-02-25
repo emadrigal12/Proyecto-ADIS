@@ -28,6 +28,12 @@
                                 <i class="fs-4 bi bi-file-earmark-arrow-up"></i><span class="ms-1 d-none d-sm-inline">Publicar</span>
                             </a>
                         </li>
+                        <li class="nav-item">
+                            <a asp-controller="Curso" asp-action="Index" class="nav-link align-middle px-0 text-white">
+                                <i class="fs-4 bi bi-file-earmark-arrow-up"></i><span class="ms-1 d-none d-sm-inline">Cursos</span>
+                            </a>
+                        </li>
+
                     </ul>
                     <hr>
                 </div>
@@ -37,7 +43,7 @@
             </div>
         </div>
     </div>
-
+    
     <footer class="border-top footer text-muted">
         <div class="container">
             &copy; 2024 - EFCoreWithAsp.netCore - <a asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
@@ -52,5 +58,6 @@
     <script src="~/lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.js"></script>
 
     @await RenderSectionAsync("Scripts", required: false)
+    
 </body>
 </html>

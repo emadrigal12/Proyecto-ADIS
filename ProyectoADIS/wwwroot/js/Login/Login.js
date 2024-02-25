@@ -74,7 +74,7 @@ function iniciarSesion() {
         })
             .then(response => {
                 if (!response.ok) {
-                    throw new Error('Invalid username or password');
+                    throw new Error('Usuario y contraseña inválidos, reintente nuevamente.');
                 }
                 window.location.href = "/Home/Index";
             })
