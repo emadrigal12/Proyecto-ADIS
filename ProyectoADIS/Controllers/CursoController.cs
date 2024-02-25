@@ -12,7 +12,7 @@ namespace ProyectoADIS.Controllers
             return View();
         }
 
-        public IActionResult CursosDisponible()
+        public IActionResult Detalle()
         {
             return View();
         }
