@@ -32,6 +32,7 @@ function validarContrasena(contrasena) {
 }
 
 function ActualizarContrasena() {
+    let usuario = $("#txtUsuario").val()
     let contraActual = $('#contraActual').val()
     let contraNueva = $('#contraNueva').val()
     let confirmarContra = $('#confirmarContra').val()
@@ -48,66 +49,98 @@ function ActualizarContrasena() {
         return document.getElementById("mensajeErrorContra").innerHTML = "No coincide la contraseña nueva con la confirmada.";
     }
     document.getElementById("mensajeErrorContra").innerHTML = "";
-    toastr.success('Contraseña cambiada exitosamente.');
 
-    setTimeout(() => {
-        window.location.reload;
-    }, 2000);
+
+    const dataUpdatePassword = {
+        Usuario: usuario,
+        newPassword: contraNueva,
+        actualPassword: contraActual,
+        Password: contraNueva
+    };
+        
+
+    const response = fetch(`${LOGIN_URL}/UpdatePassword`, {
+        method: "PUT",
+        headers: {
+            "Content-Type": "application/json"
+        },
+        body: JSON.stringify(dataUpdatePassword)
+    })
+    .then(response => {
+        if (!response.ok) {
+            throw new Error('Usuario y contraseña inválidos, reintente nuevamente.');
+        }
+        return response.json();
+    })
+    .then(data => {
+        console.log(data)
+        switch (data.code) {
+            case 1:
+                toastr.success('Contraseña cambiada exitosamente.');
+                setTimeout(() => {
+                    console.log("Se debe actualizar")
+                    $('#actualizarContra').modal('hide');
+                    window.location.href = "/Login/Index";
+                }, 2000);
+                break;
+            case 2:
+                $('#mensajeErrorContra').text(data.message);
+                break;
+            default:
+                throw new Error('Error desconocido.');
+        }
+    })
+    .catch(error => {
+        $('#mensajeErrorContra').text(error.message);
+    });
+
+    
 }
 
 function iniciarSesion() {
-    if (validacionesLogin()) {
-        let usuario = $("#txtUsuario").val();
-        let contrasena = $("#txtContrasena").val();
+    let usuario = $("#txtUsuario").val();
+    let contrasena = $("#txtContrasena").val();
 
-        var data = {
-            Usuario: usuario,
-            Password: contrasena
-        };
+    var data = {
+        Usuario: usuario,
+        Password: contrasena
+    };
 
-        fetch(`${LOGIN_URL}/IniciarSesion`, {
-            method: "POST",
-            headers: {
-                "Content-Type": "application/json"
-            },
-            body: JSON.stringify(data)
-        })
-            .then(response => {
-                if (!response.ok) {
-                    throw new Error('Usuario y contraseña inválidos, reintente nuevamente.');
-                }
-                window.location.href = "/Home/Index";
-            })
-            .catch(error => {
-                $('#mensajeError').text(error.message);
-            });
-    }
-}
-
-
-async function checkPrimerLogin() {
-    try {
-        const response = await fetch($`/${LOGIN_URL}/CheckPrimerLogin`, {
-            method: 'GET',
-            headers: {
-                'Content-Type': 'application/json'
+    fetch(`${LOGIN_URL}/IniciarSesion`, {
+        method: "POST",
+        headers: {
+            "Content-Type": "application/json"
+        },
+        body: JSON.stringify(data)
+    })
+        .then(response => {
+            if (!response.ok) {
+                throw new Error('Usuario y contraseña inválidos, reintente nuevamente.');
             }
+            return response.json();
+        })
+        .then(data => {
+            console.log(data.message)
+
+            switch (data.code) {
+                case 1:
+                    window.location.href = "/Home/Index";
+                    break;
+                case 2:
+                    $('#actualizarContra').modal('show');
+                    break;
+                case 3:
+                    $('#mensajeError').text(data.message);
+                    break;
+                default:
+                    throw new Error('Error desconocido.');
+            }
+        })
+        .catch(error => {
+            $('#mensajeError').text(error.message);
         });
-
-        if (!response.ok) {
-            throw new Error('Error al verificar el primer inicio de sesión');
-        }
-
-        const data = await response.json();
-        const primerLogin = data.primerLogin;
-
-        if (primerLogin) {
-            $('#actualizarContra').modal('show');
-        }
-
-        return primerLogin;
-    } catch (error) {
-        console.error('Ocurrió un error:', error);
-        return false;
-    }
 }
+
+
+
+
