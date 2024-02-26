@@ -8,52 +8,55 @@
 <html>
 <head>
     <title>Lista de Cursos</title>
+    <link rel="stylesheet" href="~/css/site.css"/>
     <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
 </head>
 <body>
 
 <div class="container">
-    <h1>Lista de Cursos</h1>
+        <div class="card-header text-center">
+            <h3 class="card-title titleLogin">Lista de Cursos</h3>
+        </div>
     <div class="row">
         <div class="col-md-4 mb-3">
             <div class="card">
                 <div class="card-body">
-                    <h5 class="card-title">Nombre</h5>
-                    <p class="card-text">Descripcion</p>
-                    <p class="card-text">Duración: 4</p>
-                    <a href="@Url.Action("Detalle", "Curso")" class="btn btn-primary">Ver detalles</a>
+                    <h5 class="card-title">Curso 1</h5>
+                        <img class="w-100" src="~/img/Curso1.png"/>
+                    <p class="card-text">Nota: 45%</p>
+                        <a href="@Url.Action("Detalle", "Curso")" style="background-color: #70009c; color: #fff" class="btn btn-purple">Ver detalles</a>
                 </div>
             </div>
         </div>
         <div class="col-md-4 mb-3">
-            <div class="card">
-                <div class="card-body">
-                    <h5 class="card-title">Nombre</h5>
-                    <p class="card-text">Descripcion</p>
-                    <p class="card-text">Duración: 4</p>
-                        <a href="@Url.Action("Detalle", "Curso")" class="btn btn-primary">Ver detalles</a>
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title">Curso 2</h5>
+                        <img class="w-100" src="~/img/Curso1.png" />
+                        <p class="card-text">Nota: 25%</p>
+                        <a href="@Url.Action("Detalle", "Curso")" style="background-color: #70009c; color: #fff" class="btn btn-purple">Ver detalles</a>
+                    </div>
                 </div>
-            </div>
         </div>
         <div class="col-md-4 mb-3">
-            <div class="card">
-                <div class="card-body">
-                    <h5 class="card-title">Nombre</h5>
-                    <p class="card-text">Descripcion</p>
-                    <p class="card-text">Duración: 4</p>
-                        <a href="@Url.Action("Detalle", "Curso")" class="btn btn-primary">Ver detalles</a>
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title">Curso 3</h5>
+                        <img class="w-100" src="~/img/Curso1.png" />
+                        <p class="card-text">Nota: 65%</p>
+                        <a href="@Url.Action("Detalle", "Curso")" style="background-color: #70009c; color: #fff" class="btn btn-purple">Ver detalles</a>
+                    </div>
                 </div>
-            </div>
         </div>
         <div class="col-md-4 mb-3">
-            <div class="card">
-                <div class="card-body">
-                    <h5 class="card-title">Nombre</h5>
-                    <p class="card-text">Descripcion</p>
-                    <p class="card-text">Duración: 4</p>
-                        <a href="@Url.Action("Detalle", "Curso")" class="btn btn-primary">Ver detalles</a>
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title">Curso 4</h5>
+                        <img class="w-100" src="~/img/Curso1.png" />
+                        <p class="card-text">Nota: 85%</p>
+                        <a href="@Url.Action("Detalle", "Curso")" style="background-color: #70009c; color: #fff" class="btn btn-purple">Ver detalles</a>
+                    </div>
                 </div>
-            </div>
         </div>
     </div>
 </div>

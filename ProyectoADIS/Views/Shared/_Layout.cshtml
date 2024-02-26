@@ -12,7 +12,7 @@
 <body>
     <div class="container-fluid">
         <div class="row flex-nowrap">
-            <div class="col-auto col-md-1 col-xl-1 px-sm-2 px-0" style="background-color: #402c54;">
+            <div class="col-auto col-md-2 col-xl-1 px-sm-2 px-0" style="background-color: #402c54;" id="sidebar">
                 <div class="d-flex flex-column align-items-center align-items-sm-start px-1 pt-2 text-white min-vh-100">
                     <a href="/Home" class="d-flex align-items-center pb-3 mb-md-0 me-md-auto text-white text-decoration-none">
                         <img src="https://instructure-uploads.s3.amazonaws.com/account_231950000000000001/attachments/1893/LogoUlacit-Blanco.png" alt="Logo" style="max-width: 100px;">
@@ -30,20 +30,21 @@
                         </li>
                         <li class="nav-item">
                             <a asp-controller="Curso" asp-action="Index" class="nav-link align-middle px-0 text-white">
-                                <i class="fs-4 bi bi-file-earmark-arrow-up"></i><span class="ms-1 d-none d-sm-inline">Cursos</span>
+                                <i class="fs-4 bi bi-journal-text"></i><span class="ms-1 d-none d-sm-inline">Cursos</span>
                             </a>
                         </li>
 
                     </ul>
-                    <hr>
+                    <hr class="d-sm-none"> <!-- Añadido -->
                 </div>
             </div>
             <div class="col py-3">
+                <button class="btn btn-primary d-sm-none m-2" id="menu-toggle" style="background-color: #70009c; color: #fff"><i class="bi bi-list"></i></button> <!-- Añadido -->
                 @RenderBody()
             </div>
         </div>
     </div>
-    
+
     <footer class="border-top footer text-muted">
         <div class="container">
             &copy; 2024 - EFCoreWithAsp.netCore - <a asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
@@ -53,11 +54,19 @@
     <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
     <script src="~/js/site.js" asp-append-version="true"></script>
 
+    <script>
+        $(document).ready(function () {
+            $('#menu-toggle').click(function () {
+                $('#sidebar').toggle('slide');
+            });
+        });
+    </script>
+
     <script src="~/lib/jquery/dist/jquery.js"></script>
     <script src="~/lib/jquery-validation/dist/jquery.validate.js"></script>
     <script src="~/lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.js"></script>
 
     @await RenderSectionAsync("Scripts", required: false)
-    
+
 </body>
 </html>

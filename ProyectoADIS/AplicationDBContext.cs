@@ -16,5 +16,7 @@ namespace ProyectoADIS
         public DbSet<Usuario> Usuarios { get; set; }
         public DbSet<Rol> Roles { get; set; }
         public DbSet<Asignacion> Asignacion { get; set; }
+        public DbSet<Cursos> Cursos { get; set; }
+        public DbSet<CursoRubro> CursosRubro { get; set; }
     }
 }

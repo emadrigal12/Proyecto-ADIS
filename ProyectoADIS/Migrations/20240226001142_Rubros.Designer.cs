@@ -3,6 +3,7 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using ProyectoADIS;
 
@@ -11,9 +12,11 @@ using ProyectoADIS;
 namespace ProyectoADIS.Migrations
 {
     [DbContext(typeof(AplicationDBContext))]
-    partial class AplicationDBContextModelSnapshot : ModelSnapshot
+    [Migration("20240226001142_Rubros")]
+    partial class Rubros
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -102,31 +105,6 @@ namespace ProyectoADIS.Migrations
                     b.ToTable("Asignacion");
                 });
 
-            modelBuilder.Entity("ProyectoADIS.Models.CursoRubro", b =>
-                {
-                    b.Property<int>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("int");
-
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
-
-                    b.Property<int>("CursoId")
-                        .HasColumnType("int");
-
-                    b.Property<string>("Descripcion")
-                        .IsRequired()
-                        .HasColumnType("varchar(80)");
-
-                    b.Property<int>("Valor")
-                        .HasColumnType("int");
-
-                    b.HasKey("Id");
-
-                    b.HasIndex("CursoId");
-
-                    b.ToTable("CursosRubro");
-                });
-
             modelBuilder.Entity("ProyectoADIS.Models.Cursos", b =>
                 {
                     b.Property<int>("Id")
@@ -178,17 +156,6 @@ namespace ProyectoADIS.Migrations
                         .IsRequired();
 
                     b.Navigation("Rol");
-                });
-
-            modelBuilder.Entity("ProyectoADIS.Models.CursoRubro", b =>
-                {
-                    b.HasOne("ProyectoADIS.Models.Cursos", "Curso")
-                        .WithMany()
-                        .HasForeignKey("CursoId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
-                    b.Navigation("Curso");
                 });
 
             modelBuilder.Entity("ProyectoADIS.Models.Cursos", b =>
