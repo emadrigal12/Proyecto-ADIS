@@ -76,9 +76,8 @@ function ActualizarContrasena() {
         console.log(data)
         switch (data.code) {
             case 1:
-                toastr.success('Contraseña cambiada exitosamente.');
+                toastr.success('Contraseña cambiada exitosamente', 'Exito', { class: 'toast-success' });
                 setTimeout(() => {
-                    console.log("Se debe actualizar")
                     $('#actualizarContra').modal('hide');
                     window.location.href = "/Login/Index";
                 }, 2000);
@@ -124,7 +123,10 @@ function iniciarSesion() {
 
             switch (data.code) {
                 case 1:
-                    window.location.href = "/Home/Index";
+                    toastr.success('¡Bienvenido a la plataforma!', 'Exito', { class: 'toast-success' });
+                    setTimeout(() => {
+                        window.location.href = "/Home/Index";
+                    }, 2000);
                     break;
                 case 2:
                     $('#actualizarContra').modal('show');
