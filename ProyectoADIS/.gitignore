@@ -1,1 +1,49 @@
+# ASP.NET / Visual Studio
+obj/
+bin/
 .vs/
+*.suo
+*.user
+*.bak
+*.cache
+*.log
+*.sqlite
+*.sqlite3
+*.pdb
+*.dll
+*.exe
+
+# Carpeta de compilación
+bin/
+obj/
+
+# Dependencias de NuGet
+*.nuget.props
+*.paket.restore.log
+*.paket.references
+packages/
+
+# Archivos de compilación de Visual Studio
+*.VisualState.xml
+*.exe
+*.pdb
+*.user
+*.aps
+*.pch
+*.vspscc
+*_i.c
+*_p.c
+*.ncb
+*.suo
+*.tlb
+*.tlh
+*.bak
+*.cache
+*.ilk
+*.log
+*.lib
+*.sbr
+*.sdf
+*.pyc
+*.xml
+*.docstates
