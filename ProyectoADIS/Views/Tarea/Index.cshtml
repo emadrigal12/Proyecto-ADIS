@@ -1,5 +1,57 @@
-﻿@*
-    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
-*@
-@{
-}
+﻿<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tareas</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link href="~/css/style.css" rel="stylesheet">
+</head>
+<body>
+
+    <div class="container">
+        <table class="table mt-4">
+            <div class="card-header text-center">
+            <h3 class="card-title titleLogin">Lista de Tareas</h3>
+            </div>
+            <thead class="thead">
+                <tr>
+                    <th scope="col">Descripción de la Tarea</th>
+                    <th scope="col">Fecha de Entrega</th>
+                    <th scope="col">Acciones</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Tarea 1</td>
+                    <td>17 de marzo, 2024</td>
+                    <td><button class="btn btn-purple" onclick="mostrarDetalles(1)">Ver más</button></td>
+                </tr>
+                <tr>
+                    <td>Tarea 2</td>
+                    <td>20 de marzo, 2024</td>
+                    <td><button class="btn btn-purple" onclick="mostrarDetalles(2)">Ver más</button></td>
+                </tr>
+                <tr>
+                    <td>Tarea 3</td>
+                    <td>23 de marzo, 2024</td>
+                    <td><button class="btn btn-purple" onclick="mostrarDetalles(3)">Ver más</button></td>
+                </tr>
+                <!-- Agrega más filas según sea necesario -->
+            </tbody>
+        </table>
+    </div>
+
+    <!-- Bootstrap JS (opcional, solo si necesitas funcionalidades específicas de Bootstrap) -->
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+    <script>
+        function mostrarDetalles(numeroTarea) {
+
+            window.location.href = "/Tarea/Details";
+        }
+    </script>
+
+</body>
+</html>
