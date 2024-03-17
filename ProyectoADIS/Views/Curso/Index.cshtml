@@ -5,64 +5,212 @@
 @* @model List<Curso> <!-- Suponiendo que tengas una clase "Curso" definida en tu proyecto --> *@
 
 <!DOCTYPE html>
-<html>
-<head>
-    <title>Lista de Cursos</title>
-    <link rel="stylesheet" href="~/css/site.css"/>
-    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
-</head>
-<body>
-
-<div class="container">
-        <div class="card-header text-center">
-            <h3 class="card-title titleLogin">Lista de Cursos</h3>
-        </div>
-    <div class="row">
-        <div class="col-md-4 mb-3">
-            <div class="card">
-                <div class="card-body">
-                    <h5 class="card-title">Curso 1</h5>
-                        <img class="w-100" src="~/img/Curso1.png"/>
-                    <p class="card-text">Nota: 45%</p>
-                        <a href="@Url.Action("Detalle", "Curso")" style="background-color: #70009c; color: #fff" class="btn btn-purple">Ver detalles</a>
+<html lang="en">
+    <head>
+        <title>Lista de Cursos</title>
+        <link rel="stylesheet" href="~/css/site.css"/>
+        <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    </head>
+    <body>
+    
+    <div class="container">
+            <div class="card-header text-center">
+                <h3 class="card-title titleLogin">Lista de Cursos</h3>
+            </div>
+        <div class="row">
+            <div class="col-md-4 mb-3">
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title">Curso 1</h5>
+                            <img class="w-100" src="~/img/Curso1.png"/>
+                        <p class="card-text">Nota: 45%</p>
+                            <a href="@Url.Action("Detalle", "Curso")" style="background-color: #70009c; color: #fff" class="btn btn-purple">Ver detalles</a>
+                            <button type="button" class="btn btn-purple" style="background-color: #70009c; color: #fff;" data-toggle="modal" data-target="#modalGrupos">Grupos</button>
+                    </div>
                 </div>
             </div>
-        </div>
-        <div class="col-md-4 mb-3">
-                <div class="card">
-                    <div class="card-body">
-                        <h5 class="card-title">Curso 2</h5>
-                        <img class="w-100" src="~/img/Curso1.png" />
-                        <p class="card-text">Nota: 25%</p>
-                        <a href="@Url.Action("Detalle", "Curso")" style="background-color: #70009c; color: #fff" class="btn btn-purple">Ver detalles</a>
+            <div class="col-md-4 mb-3">
+                    <div class="card">
+                        <div class="card-body">
+                            <h5 class="card-title">Curso 2</h5>
+                            <img class="w-100" src="~/img/Curso1.png" />
+                            <p class="card-text">Nota: 25%</p>
+                            <a href="@Url.Action("Detalle", "Curso")" style="background-color: #70009c; color: #fff" class="btn btn-purple">Ver detalles</a>
+                        </div>
                     </div>
-                </div>
-        </div>
-        <div class="col-md-4 mb-3">
-                <div class="card">
-                    <div class="card-body">
-                        <h5 class="card-title">Curso 3</h5>
-                        <img class="w-100" src="~/img/Curso1.png" />
-                        <p class="card-text">Nota: 65%</p>
-                        <a href="@Url.Action("Detalle", "Curso")" style="background-color: #70009c; color: #fff" class="btn btn-purple">Ver detalles</a>
+            </div>
+            <div class="col-md-4 mb-3">
+                    <div class="card">
+                        <div class="card-body">
+                            <h5 class="card-title">Curso 3</h5>
+                            <img class="w-100" src="~/img/Curso1.png" />
+                            <p class="card-text">Nota: 65%</p>
+                            <a href="@Url.Action("Detalle", "Curso")" style="background-color: #70009c; color: #fff" class="btn btn-purple">Ver detalles</a>
+                        </div>
                     </div>
-                </div>
-        </div>
-        <div class="col-md-4 mb-3">
-                <div class="card">
-                    <div class="card-body">
-                        <h5 class="card-title">Curso 4</h5>
-                        <img class="w-100" src="~/img/Curso1.png" />
-                        <p class="card-text">Nota: 85%</p>
-                        <a href="@Url.Action("Detalle", "Curso")" style="background-color: #70009c; color: #fff" class="btn btn-purple">Ver detalles</a>
+            </div>
+            <div class="col-md-4 mb-3">
+                    <div class="card">
+                        <div class="card-body">
+                            <h5 class="card-title">Curso 4</h5>
+                            <img class="w-100" src="~/img/Curso1.png" />
+                            <p class="card-text">Nota: 85%</p>
+                            <a href="@Url.Action("Detalle", "Curso")" style="background-color: #70009c; color: #fff" class="btn btn-purple">Ver detalles</a>
+                        </div>
                     </div>
-                </div>
+            </div>
         </div>
     </div>
-</div>
 
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.bundle.min.js"></script>
-</body>
+    <!-- Modal Vista Grupos -->
+  <div class="modal fade" id="modalGrupos" role="dialog">
+    <div class="modal-dialog modal-lg">
+    
+      <div class="modal-content">
+        <div class="modal-header">
+            <h4 class="modal-title">Grupos (Curso #)</h4>
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+        </div>
+        <div class="modal-body">
+          <div style="text-align: right;">
+            <button style="background-color: #70009c; color: #fff; font-weight: bold;" class="btn btn-purple" data-toggle="modal" data-target="#modalNombreGrupo">Crear Grupo</button>
+          </div>
+          <div style="display: grid; grid-template-columns: 0.fr 1fr;">
+            <!--Contenedor de estudiantes-->
+            <div>
+                <table class="table table-bordered">
+                    <thead>
+                    <tr>
+                        <th scope="col">Estudiante</th>
+                        
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr>
+                        <th scope="row">1</th>
+                        
+                    </tr>
+                    <tr>
+                        <th scope="row">2</th>
+                                                                    
+                    </tr>
+                    <tr>
+                        <th scope="row">3</th>
+                                                                    
+                    </tr>
+                    </tbody>
+                </table>
+            </div>
+            <!--Contenedor de grupos-->
+            <div style="border: thin solid; border-radius: 15px;">
+                <div style="width: 100%;">
+                    <div>
+            
+                        <table class="table table-bordered">
+                            <thead>
+                            <tr>
+                                <th scope="col">#</th>
+                                <th scope="col">Nombre</th>
+                                <th scope="col">Integrantes</th>
+                                <th scope="col">Acciones</th>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            <tr>
+                                <th scope="row">1</th>
+                                <td>Grupo 1</td>
+                                <td>Prueba</td>
+                                <td>
+                                    <button style="background-color: #70009c; color: #fff;" class="btn btn-purple" data-toggle="modal" data-target="#modalEliminar">Eliminar</button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th scope="row">2</th>
+                                <td>Grupo 2</td>
+                                <td>Prueba</td>
+                                <td>
+                                    <button style="background-color: #70009c; color: #fff;" class="btn btn-purple" data-toggle="modal" data-target="#modalEliminar">Eliminar</button>
+                                </td>
+                                
+                            </tr>
+                            <tr>
+                                <th scope="row">3</th>
+                                <td>Grupo 3</td>
+                                <td>Prueba</td>
+                                <td>
+                                    <button style="background-color: #70009c; color: #fff;" class="btn btn-purple" data-toggle="modal" data-target="#modalEliminar">Eliminar</button>
+                                </td>
+                            </tr>
+                            </tbody>
+                        </table>
+                        
+                    </div>
+                </div>
+            </div>
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default" data-dismiss="modal">Cerrar</button>
+        </div>
+      </div>
+      
+    </div>
+  </div>
+
+      <!-- Modal Nombre Grupo -->
+      <div class="modal fade" id="modalNombreGrupo" role="dialog">
+        <div class="modal-dialog">
+        
+          <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title">Asignar Nombre a Grupo #</h4>
+              <button type="button" class="close" data-dismiss="modal">&times;</button>
+            </div>
+            <div class="modal-body">
+              <!--Formulario-->
+              <div style="padding: 15px; margin: 15px; border: thin solid; border-radius: 15px;">
+                <h6 style="display: inline;">Nombre:</h6>
+                <input type="text" placeholder="Nombre del Grupo" style="display: inline;">
+              </div>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-default">Confirmar</button>
+            </div>
+          </div>
+          
+        </div>
+      </div>
+
+      <!--Modal Confirmacion Eliminar-->
+    <div class="modal" id="modalEliminar">
+        <div class="modal-dialog">
+            <div class="modal-content">
+    
+                <!-- Modal Header -->
+                <div class="modal-header">
+                    <h4 class="modal-title">Eliminar Grupo</h4>
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                </div>
+        
+                <!-- Modal body -->
+                <div class="modal-body">
+                    <h5>Esta seguro de eliminar este grupo?</h5>
+                    <button style="background-color: #70009c; color: #fff;" class="btn btn-purple">Guardar</button>
+                    <button style="background-color: #70009c; color: #fff;" class="btn btn-purple">Cancelar</button>
+                </div>
+        
+            </div>
+        </div>
+    </div>
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.bundle.min.js"></script>
+
+    <script>
+        
+    </script>
+
+    </body>
+    
 </html>
 
