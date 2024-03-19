@@ -1,0 +1,26 @@
+﻿@{
+    ViewData["Title"] = "CalificacionesController";
+}
+
+<head>
+    <link rel="stylesheet" href="~/css/Calificaciones.css" />
+</head>
+
+<button id="btnCalificarAsignaciones">Calificar Asignaciones</button>
+
+<div id="containerBotones">
+    <button id="btnCalificarGrupos">Calificar Grupos</button>
+    <button id="btnCalificarEstudiantes">Calificar Estudiantes Individualmente</button>
+</div>
+
+<script>
+     $(document).ready(function () {
+         $("#btnCalificarGrupos").click(function () {
+             window.location.href = "/Calificaciones/Grupal"; 
+         });
+
+         $("#btnCalificarEstudiantes").click(function () {
+             window.location.href = "/Calificaciones/Individual"; 
+         });
+     });
+</script>
