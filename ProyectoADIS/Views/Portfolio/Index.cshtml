@@ -27,53 +27,95 @@
                     <div class="card-body">
                         <form>
                             <div class="form-group ">
-                                <label for="username">Nombre de la Asignación:</label>
+                                <label for="username">Nombre Asignación:</label>
                                 <input type="text" class="form-control" id="txtNombre" placeholder="Ingrese el nombre">
                             </div>
 
                             <div class="form-group mt-2">
-                                <label for="Descripcion">Descripción</label>
-                                <textarea class="form-control" id="txtDescripcion" placeholder="Ingrese una descripción"></textarea>
+                                <label for="Descripcion">Detalles</label>
+                                <textarea class="form-control" id="txtDescripcion" placeholder="Ingrese los detalles"></textarea>
+                            </div>
+
+                            <div class="form-group mt-2 ">
+                                <label for="valor">Valor</label><br />
+                                <input class="form-control" type="number" placeholder="Ingrese el valor de la tarea" name="valor" required>
+                            </div>
+                            
+                            <div class="form-group mt-2 ">
+                                <label for="fecha">Curso(s)</label><br />
+                                <select class="form-control" name="curso" id="curso" placeholder="Curso(s)" required>
+                                    <option value="" disabled selected>Seleccione un curso</option>
+                                    <option value="curso1">Curso 1</option>
+                                    <option value="curso2">Curso 2</option>
+                                    <option value="curso3">Curso 3</option>
+                                </select>
                             </div>
 
                             <div class="form-group mt-2 ">
                                 <label for="fecha">Fecha de Entrega</label><br />
-                                <input class="form-control"  type="datetime-local" placeholder="Seleccione la fecha de entrega" name="fecha" required>
+                                <input class="form-control" type="datetime-local" placeholder="Seleccione la fecha de entrega" name="fecha" required>
                             </div>
 
-                            <button type="button" onclick="closeForm();" class="btn open-button mt-4">Publicar</button>
+                            <div class="form-group mt-2 ">
+                                <label for="fecha">Tipo de Entrega</label><br />
+                                <select class="form-control" name="semana" id="semanaInput" placeholder="Seleccione la forma de entrega" required>
+                                    <option value="" disabled selected>Seleccione la forma de entrega</option>
+                                    <option value="grupal">Grupal</option>
+                                    <option value="individual">Individual</option>
+                                </select>
+                            </div>
+
+                            <div class="form-group mt-2">
+                                <label for="fecha">Semana</label><br>
+                                <select class="form-control" name="semana" id="semanaInput" placeholder="Seleccione la semana de entrega" required>
+                                    <option value="" disabled selected>Seleccione la semana de entrega</option>
+                                    <option value="semana1">Semana 1</option>
+                                    <option value="semana2">Semana 2</option>
+                                    <option value="semana2">Semana 3</option>
+                                    <option value="semana2">Semana 4</option>
+                                    <option value="semana2">Semana 5</option>
+                                    <option value="semana2">Semana 6</option>
+                                    <option value="semana2">Semana 7</option>
+                                    <option value="semana2">Semana 8</option>
+                                    <option value="semana2">Semana 9</option>
+                                    <option value="semana2">Semana 10</option>
+                                    <option value="semana2">Semana 11</option>
+                                    <option value="semana2">Semana 12</option>
+                                    <option value="semana2">Semana 13</option>
+                                    <option value="semana2">Semana 14</option>
+                                    <option value="semana2">Semana 15</option>
+                                </select>
+                                <small id="semanaError" style="color: red; display: none;">Por favor, seleccione una semana válida entre semana1 y semana15.</small>
+                            </div>
+
+                            <div class="form-group mt-2 ">
+                                <label for="fecha">Comentarios</label><br />
+                                <input class="form-control" type="text" placeholder="Agregue comentario" name="comentarios">
+                            </div>
+                            <div class="form-group mt-2 ">
+                                <label for="fecha">Adjuntar rubrica</label><br />
+                                <input class="form-control" type="file" placeholder="Seleccione el documento a subir" name="documento" required>
+                            </div>
+                            <div class="form-group mt-2 ">
+                                <label for="fecha">Adjuntar documento</label><br />
+                                <input class="form-control" type="file" placeholder="Seleccione el documento a subir" name="documento" required>
+                            </div>
+
+                            <button type="button" onclick="verTarea();" class="btn open-button mt-4">Publicar</button>
                         </form>
                     </div>
                 </div>
             </div>
         </div>
     </div>
-    <div class="form-popup d-none" id="myForm">
-        <form action="" class="form-container">
-
-            <label for="nombre"><b>Nombre de la Asignación</b></label>
-            <input type="text" placeholder="Ingrese el nombre de la asignación" name="nombre" required>
-
-            <label for="descripcion"><b>Descripción</b></label>
-            <input type="text" placeholder="Ingrese la descripción" name="descripcion">
-
-            <label for="fecha"><b>Fecha de Entrega</b></label>
-            <input type="datetime-local" placeholder="" name="fecha" required>
-
-            <button type="submit" class="btn">Publicar</button>
-            <button type="button" class="btn cancel" onclick="closeForm()">Close</button>
-            
-        </form>
-    </div>
-
+   
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     @section Scripts {
         <script src="~/js/Portfolio/Index.js"></script>
         <script src="~/js/toastr.min.js"></script>
     }
-    
+
 
 
 </body>
 </html>
-
-

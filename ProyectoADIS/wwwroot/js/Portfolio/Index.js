@@ -3,9 +3,12 @@
 }
 
 
+function verTarea() {
+    window.location.href = "/Tarea/Details";
 
+}
 
-
-$(function () {
+$(document).ready(function () {
+    // Manejar clic en el botón "Calificar"
     
 });
