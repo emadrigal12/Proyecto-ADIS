@@ -21,6 +21,9 @@
             <h3 class="card-title titleLogin">Nombre Curso 1</h3>
         </div>
         <div class="card-body">
+                <a href="@Url.Action("Index", "Curso")" class="btn mb-3" style="background-color: #70009c; color: #fff">Personas</a>
+                <a href="@Url.Action("Asistencia", "Curso")" class="btn mb-3 ml-3" style="background-color: #70009c; color: #fff">Asistencia</a>
+                <a href="@Url.Action("Index", "Curso")" class="btn mb-3 ml-3" style="background-color: #70009c; color: #fff">Grupos</a>
                 <div class="accordion accordion-flush" id="accordionFlushExample">
                     <div class="accordion-item">
                         <h2 class="accordion-header">
@@ -197,37 +200,6 @@
     </div>
         <a href="@Url.Action("Index", "Curso")" class="btn mt-3" style="background-color: #70009c; color: #fff">Volver a la lista de cursos</a>
 </div>
-
-<ul class="sticky-toolbar nav flex-column pl-2 pr-2 pt-3 pb-3 mt-4">
-    <!--begin::Item-->
-    <li class="nav-item mb-2" id="kt_demo_panel_toggle" data-toggle="tooltip" title="" data-placement="right" data-original-title="Check out more demos">
-        <a class="btn btn-sm btn-icon btn-bg-light btn-icon-success btn-hover-success" href="#">
-            <i class="flaticon2-drop"></i>
-        </a>
-    </li>
-    <!--end::Item-->
-    <!--begin::Item-->
-    <li class="nav-item mb-2" data-toggle="tooltip" title="" data-placement="left" data-original-title="Layout Builder">
-        <a class="btn btn-sm btn-icon btn-bg-light btn-icon-primary btn-hover-primary" href="/metronic/demo1/builder.html">
-            <i class="flaticon2-gear"></i>
-        </a>
-    </li>
-    <!--end::Item-->
-    <!--begin::Item-->
-    <li class="nav-item mb-2" data-toggle="tooltip" title="" data-placement="left" data-original-title="Documentation">
-        <a class="btn btn-sm btn-icon btn-bg-light btn-icon-warning btn-hover-warning" href="https://keenthemes.com/metronic/?page=docs" target="_blank">
-            <i class="flaticon2-telegram-logo"></i>
-        </a>
-    </li>
-    <!--end::Item-->
-    <!--begin::Item-->
-    <li class="nav-item" id="kt_sticky_toolbar_chat_toggler" data-toggle="tooltip" title="" data-placement="left" data-original-title="Chat Example">
-        <a class="btn btn-sm btn-icon btn-bg-light btn-icon-danger btn-hover-danger" href="#" data-toggle="modal" data-target="#kt_chat_modal">
-            <i class="flaticon2-chat-1"></i>
-        </a>
-    </li>
-    <!--end::Item-->
-</ul>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.bundle.min.js"></script>
