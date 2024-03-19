@@ -26,8 +26,16 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQXNpZ25hY2lvbkFkZFxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
+[C:/Users/emili/Documents/Universidad/Analisis e implementacion/ProyectoFinal/Proyecto-ADIS/ProyectoADIS/Views/Asignacion/Grupal.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQXNpZ25hY2lvblxHcnVwYWwuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/Users/emili/Documents/Universidad/Analisis e implementacion/ProyectoFinal/Proyecto-ADIS/ProyectoADIS/Views/Asignacion/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQXNpZ25hY2lvblxJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/emili/Documents/Universidad/Analisis e implementacion/ProyectoFinal/Proyecto-ADIS/ProyectoADIS/Views/Asignacion/Individual.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQXNpZ25hY2lvblxJbmRpdmlkdWFsLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/emili/Documents/Universidad/Analisis e implementacion/ProyectoFinal/Proyecto-ADIS/ProyectoADIS/Views/Calificaciones/CalificarEstudiantes.cshtml]

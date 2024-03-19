@@ -2,7 +2,7 @@
     text-align: center;
 }
 
-    #containerBotones button {
+#containerBotones button {
     margin: 5px;
     padding: 10px 20px;
     background-color: #70009c;
@@ -10,8 +10,8 @@
     border: none;
     border-radius: 5px;
     cursor: pointer;
-    }
+}
 
-        #containerBotones button:hover {
-        background-color: #6a5acd;
-        }
+#containerBotones button:hover {
+    background-color: #6a5acd;
+}

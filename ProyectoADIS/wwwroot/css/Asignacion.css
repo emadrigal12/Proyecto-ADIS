@@ -1,0 +1,21 @@
+﻿.btnCalificar,
+.btnModificarNota {
+    background-color: #70009c;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-right: 30px;
+}
+
+
+.btnCalificar:hover,
+.btnModificarNota:hover {
+    opacity: 0.8;
+}
+
+.btn-container {
+    text-align: center;
+    width:  80%;
+}

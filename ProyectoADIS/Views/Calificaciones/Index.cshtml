@@ -13,14 +13,15 @@
     <button id="btnCalificarEstudiantes">Calificar Estudiantes Individualmente</button>
 </div>
 
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 <script>
-     $(document).ready(function () {
-         $("#btnCalificarGrupos").click(function () {
-             window.location.href = "/Calificaciones/Grupal"; 
-         });
+    $(document).ready(function () {
+        $("#btnCalificarGrupos").click(function () {
+            window.location.href = "/Asignacion/Grupal";
+        });
 
-         $("#btnCalificarEstudiantes").click(function () {
-             window.location.href = "/Calificaciones/Individual"; 
-         });
-     });
+        $("#btnCalificarEstudiantes").click(function () {
+            window.location.href = "/Asignacion/Individual";
+        });
+    });
 </script>
