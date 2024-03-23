@@ -23,7 +23,8 @@
         <div class="card-body">
                 <a href="@Url.Action("Index", "Curso")" class="btn mb-3" style="background-color: #70009c; color: #fff">Personas</a>
                 <a href="@Url.Action("Asistencia", "Curso")" class="btn mb-3 ml-3" style="background-color: #70009c; color: #fff">Asistencia</a>
-                <a href="@Url.Action("Index", "Curso")" class="btn mb-3 ml-3" style="background-color: #70009c; color: #fff">Grupos</a>
+                <button type="button" class="btn btn-purple mb-3 ml-3" style="background-color: #70009c; color: #fff;" data-toggle="modal" data-target="#modalGrupos">Grupos</button>
+                <a href="@Url.Action("Index", "Calificaciones")" class="btn mb-3 ml-3" style="background-color: #70009c; color: #fff">Calificar asignaciones</a>
                 <div class="accordion accordion-flush" id="accordionFlushExample">
                     <div class="accordion-item">
                         <h2 class="accordion-header">
@@ -200,6 +201,144 @@
     </div>
         <a href="@Url.Action("Index", "Curso")" class="btn mt-3" style="background-color: #70009c; color: #fff">Volver a la lista de cursos</a>
 </div>
+    <div class="modal fade" id="modalGrupos" role="dialog">
+        <div class="modal-dialog modal-lg">
+
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h4 class="modal-title">Grupos (Curso #)</h4>
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                </div>
+                <div class="modal-body">
+                    <div style="text-align: right;">
+                        <button style="background-color: #70009c; color: #fff; font-weight: bold;" class="btn btn-purple mb-3" data-toggle="modal" data-target="#modalNombreGrupo">Crear Grupo</button>
+                    </div>
+                    <div style="display: grid; grid-template-columns: 0.fr 1fr;">
+                        <!--Contenedor de estudiantes-->
+                        <div>
+                            <table class="table table-bordered">
+                                <thead>
+                                    <tr>
+                                        <th scope="col">Estudiante</th>
+
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <th scope="row">1</th>
+
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">2</th>
+
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">3</th>
+
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <!--Contenedor de grupos-->
+                        <div style="border: thin solid; border-radius: 15px;">
+                            <div style="width: 100%;">
+                                <div>
+
+                                    <table class="table table-bordered">
+                                        <thead>
+                                            <tr>
+                                                <th scope="col">#</th>
+                                                <th scope="col">Nombre</th>
+                                                <th scope="col">Integrantes</th>
+                                                <th scope="col">Acciones</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <th scope="row">1</th>
+                                                <td>Grupo 1</td>
+                                                <td>Prueba</td>
+                                                <td>
+                                                    <button style="background-color: #70009c; color: #fff;" class="btn btn-purple" data-toggle="modal" data-target="#modalEliminar"><i class="bi bi-trash"></i></button>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <th scope="row">2</th>
+                                                <td>Grupo 2</td>
+                                                <td>Prueba</td>
+                                                <td>
+                                                    <button style="background-color: #70009c; color: #fff;" class="btn btn-purple" data-toggle="modal" data-target="#modalEliminar"><i class="bi bi-trash"></i></button>
+                                                </td>
+
+                                            </tr>
+                                            <tr>
+                                                <th scope="row">3</th>
+                                                <td>Grupo 3</td>
+                                                <td>Prueba</td>
+                                                <td>
+                                                    <button style="background-color: #70009c; color: #fff;" class="btn btn-purple" data-toggle="modal" data-target="#modalEliminar"><i class="bi bi-trash"></i></button>
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" style="background-color: #70009c; color: #fff;" data-dismiss="modal">Cerrar</button>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <!-- Modal Nombre Grupo -->
+    <div class="modal fade" id="modalNombreGrupo" role="dialog">
+        <div class="modal-dialog">
+
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h4 class="modal-title">Asignar Nombre a Grupo #</h4>
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                </div>
+                <div class="modal-body">
+                    <!--Formulario-->
+                    <div style="padding: 15px; margin: 15px; border: thin solid; border-radius: 15px;">
+                        <h6 style="display: inline;">Nombre:</h6>
+                        <input type="text" placeholder="Nombre del Grupo" maxlength="20" style="display: inline;">
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-purple" style="background-color: #70009c; color: #fff;">Guardar</button>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <!--Modal Confirmacion Eliminar-->
+    <div class="modal" id="modalEliminar">
+        <div class="modal-dialog">
+            <div class="modal-content">
+
+                <!-- Modal Header -->
+                <div class="modal-header">
+                    <h4 class="modal-title">Eliminar Grupo</h4>
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                </div>
+
+                <!-- Modal body -->
+                <div class="modal-body">
+                    <h5>Esta seguro de eliminar este grupo?</h5>
+                    <button style="background-color: #70009c; color: #fff;" class="btn btn-purple">Guardar</button>
+                    <button style="background-color: #70009c; color: #fff;" class="btn btn-purple">Cancelar</button>
+                </div>
+
+            </div>
+        </div>
+    </div>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.bundle.min.js"></script>
